@@ -1,12 +1,14 @@
-let inputField = document.querySelector(`.tape-text`);
-let button = document.querySelector(`.button`);
-let newLine = document.querySelector(`.new-line`);
+let inputField = document.querySelector(".tape-text");
+let button = document.querySelector(".button");
+let newLine = document.querySelector(".new-line");
 
 button.onclick = function () {
-  let a = inputField.value;
-  //   console.log(a);
-  let b = document.createElement("li");
-  b.appendChild(document.createTextNode(a));
-  newLine.appendChild(b);
+  let enteredText = inputField.value;
+  if (!enteredText) return;
+
+  let newItem = document.createElement("li");
+  newItem.innerText = inputField.value;
+
+  newLine.append(newItem);
   inputField.value = "";
 };
