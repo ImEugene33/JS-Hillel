@@ -1,15 +1,15 @@
-let inputField = document.querySelector(".tape-text");
-let button = document.querySelector(".button");
-let newLine = document.querySelector(".new-line");
+let inputFieldEl = document.querySelector(".tape-text");
+let buttonEl = document.querySelector(".button");
+let newLineEl = document.querySelector(".new-line");
 let currentDate = new Date().toLocaleTimeString();
 
-button.onclick = function () {
-  let enteredText = inputField.value;
+buttonEl.onclick = function () {
+  let enteredText = inputFieldEl.value;
   if (!enteredText) return;
 
   let newItem = document.createElement("li");
-  newItem.innerText = inputField.value + "	" + currentDate;
+  newItem.innerText = inputFieldEl.value;
 
-  newLine.append(newItem);
-  inputField.value = "";
+  newLineEl.append(newItem);
+  inputFieldEl.value = "";
 };
