@@ -15,3 +15,8 @@ button {
 .hidden {
   display: none;
 }
+.container-alert {
+  background-color: yellow;
+  text-align: center;
+  font-size: 5em;
+}
