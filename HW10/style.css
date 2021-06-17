@@ -1,14 +1,17 @@
-.container {
+.container-login {
   margin: 0 auto;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.form-button {
-  display: block;
+button {
+  margin-top: 1em;
 }
 
 .invalid {
   background-color: tomato;
+}
+.hidden {
+  display: none;
 }
