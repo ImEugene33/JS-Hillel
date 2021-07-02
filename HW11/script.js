@@ -1,7 +1,7 @@
 let inputFieldEl = document.querySelector(".tape-text");
 let buttonEl = document.querySelector(".button");
 let newLineEl = document.querySelector(".new-line");
-// let currentDateEl = new Date().toLocaleTimeString();
+
 const itemTemplate = document.getElementById("item-template").innerHTML;
 const elem = document.querySelector(".container-items");
 
@@ -13,11 +13,19 @@ const render = (template, dataObject) => {
 };
 
 const onItemDelete = (evt) => {
-  if (evt.target.dataset["action"] === "delete") {
+  if (evt.target.dataset.action === "delete") {
     evt.target.parentElement.remove();
   }
 };
 newLineEl.addEventListener("click", onItemDelete);
+
+const onCheck = (ev) => {
+  if (ev.target.dataset.action === "check") {
+    ev.target.parentElement.classList.toggle("checked");
+  }
+  true;
+};
+newLineEl.addEventListener("change", onCheck);
 
 /////////copy////////////
 

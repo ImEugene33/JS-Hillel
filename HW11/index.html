@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
     <title>HW11</title>
   </head>
   <body>
@@ -16,13 +17,15 @@
       <div class="container-items">
         <ul class="new-line"></ul>
       </div>
+
       <script id="item-template" type="text/template">
             <div>
                 <span>{{label}}</span>
                 <span>{{date}}</span>
                 <button data-action="delete">delete</button>
                 <button data-action="copy">copy</button>
-        <input type="checkbox" id=”one”>
+
+        <input data-action="check" type="checkbox" id="one" />
             </div>
       </script>
     </main>
