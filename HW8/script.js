@@ -1,37 +1,28 @@
 function calc(value) {
-  const initValue = value;
+  let initValue = value;
 
-  function foo() {
-    return {
-      add() {
-        return initValue + value;
-      },
-      subtract() {
-        return initValue - value;
-      },
-      multiplay() {
-        return initValue * value;
-      },
-      division() {
-        return initValue / value;
-      },
-      getInitialValue() {
-        return initValue;
-      },
-    };
-  }
-  return foo();
+  return {
+    add: (value2) => (initValue += value2),
+
+    subtract: (value2) => (initValue -= value2),
+
+    multiplay: (value2) => (initValue *= value2),
+    division: (value2) => (initValue /= value2),
+    getInitialValue: () => initValue,
+    printResult: () => {
+      console.log(initValue);
+    },
+  };
 }
 
-const result = calc(5);
-console.log(result);
+const result = calc(15);
 
-console.log("summ: ", result.add());
+result.add(3);
 
-console.log("subtract: ", result.subtract());
+result.subtract(4);
 
-console.log("multi: ", result.multiplay());
+result.multiplay(2);
 
-console.log("division: ", result.division());
+result.division(7);
 
-console.log("origin: ", result.getInitialValue());
+result.printResult();
