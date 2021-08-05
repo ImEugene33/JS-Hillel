@@ -1,0 +1,8 @@
+@mixin clear-list {
+  list-style: none;
+}
+
+ul {
+  @include clear-list();
+  display: flex;
+}
