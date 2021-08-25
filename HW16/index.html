@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW10</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container" id="login-form">
+      <div class="container-login">
+        <div class="notification is-danger hidden" id="alert-notification">
+          Incorrect credentials
+        </div>
+        <label for="customer-name" class="form-field-label">Login</label>
+        <input class="input" type="text" id="login" placeholder="Text input" />
+
+        <label for="customer-name" class="form-field-label">Password</label>
+        <input
+          class="input"
+          type="text"
+          id="password"
+          placeholder="Text input"
+        />
+
+        <button class="button is-primary" id="btn" disabled>Login</button>
+      </div>
+    </div>
+    <ul id="welcome" class="container-alert hidden"></ul>
+
+    <script id="item-template" type="text/template">
+      <div>
+      	 <h2> {{name}}</h2>
+      	 <h2>{{lname}}</h2>
+        <p>{{email}}</p>
+      	 <img src='{{avatar}}'</img>
+      </div>
+    </script>
+  </body>
+</html>
