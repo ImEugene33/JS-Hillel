@@ -1,16 +1,40 @@
-.accordion-item {
+body {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+ul {
+  margin: 0 auto;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  max-width: 500px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: grey;
+}
+
+.container {
+  margin: 20px 0 20px 0;
 }
 
 .accordion-item > .title {
+  font-size: 1.5rem;
+  padding: 15px 0 15px 0;
+  text-shadow: 1px 1px 1px #000;
+  transition: all 0.4s linear;
+}
+.title:active {
+  background-color: gainsboro;
 }
 
 .accordion-item > .content {
   display: none;
+
+  margin: 0;
+  padding: 15px 0 15px 0;
 }
 
-.accordion-item.extended {
-}
-
-.accordion-item.extended > .content {
+.accordion-item.show > .content {
   display: block;
 }
